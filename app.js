@@ -54,11 +54,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+var s=sum(a,b);
+var k= s[0];
+var result= sum(k,c)[0];
+
+var m=multiply(a,b);
+var d=m[0];
+var f=multiply(d,c)[0];
+
+var meg=`${a} and ${b} and ${c} sum to ${result}.`;
+var msg2=`The product of ${a} and ${b} and ${c} is ${f}.`;
+return[result,f,meg,msg2];
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
